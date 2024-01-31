@@ -1,0 +1,77 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 12vh;
+  align-items: center;
+}
+nav header{
+    display: flex;
+    align-items: center;
+}
+nav header .App-logo {
+  height: 25px;
+  height: 25px;
+  margin-right: 7px;
+}
+nav header .App-title {
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin-inline: 15px;
+}
+nav ul li {
+  margin-inline: 15px;
+}
+nav ul li:hover .line{
+    width: 100%;
+    transition: .5s;
+}
+nav button {
+  padding: 12px 45px 12px 45px;
+  margin-inline: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+nav .btn .signup {
+  background: #edecff;
+  color: var(--primary-color);
+}
+nav .btn .signin {
+  background: var(--primary-color);
+  color: var(--app-white);
+}
+.intro {
+    height: 800px;
+    background: #F5F7FA;padding-top: 45px;
+}
+.intro .contain-all{
+    margin: auto;
+    width: 90%;
+}
+.intro .contain-all .intro-text{
+    display: flex;
+}
+.intro .contain-all .intro-text h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.intro .contain-all .intro-text-desc{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-right: 80px;
+}
+.intro img{
+    width: 100%;
+}
+.line{
+    height: 2px;
+    width: 0;
+    background-color: var(--primary-color);
+    transition: .5s;
+}

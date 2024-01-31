@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
-import "./App.css"
+import "../assets/styles/App.css"
+import "./styles/auth.css"
 import { Link } from "react-router-dom";
 
 function Login(params) {

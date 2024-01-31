@@ -1,4 +1,4 @@
-import logo from '../../assets/logo-dark.png';
+import logo from '../../assets/images/logo-dark.png';
 
 export function Header(params) {
     console.log(params);

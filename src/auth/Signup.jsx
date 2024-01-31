@@ -1,7 +1,9 @@
-import googleIcon from '../assets/icons8-google-48.png';
+import googleIcon from '../assets/images/icons8-google-48.png';
 import { Header } from './components/Header';
 import { Link } from 'react-router-dom';
-import './App.css';
+import "../assets/styles/App.css"
+import './styles/auth.css';
+
 
 function SignUp() {
   return (
