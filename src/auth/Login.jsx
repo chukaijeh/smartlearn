@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 
 function Login(params) {
     return (<div>
-        <Header />
-        <div className="auth-main">
+        <Link to={"/"}>
+            <Header />
+        </Link>        <div className="auth-main">
             <div className='bg-image main-common bg-image-lg'>
                 <div className='contain-text'>
                     <h1>Login and let's make <br /> magic happen!</h1>

@@ -8,7 +8,9 @@ import './styles/auth.css';
 function SignUp() {
   return (
     <div className="auth">
-      <Header />
+    <Link to={"/"}>
+        <Header />
+    </Link>
       <div className="auth-main">
         <div className='bg-image main-common'>
           <div className='contain-text'>
