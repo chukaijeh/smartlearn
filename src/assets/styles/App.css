@@ -22,6 +22,8 @@ a{
 .flex{display: flex;}
 .flex-center-row{justify-content: center;}
 .flex-center-column{align-items: center;}
+.flex-column{flex-direction: column;}
+.fade-text{opacity: .8;}
 
 ::-webkit-scrollbar {
   width: 10px;

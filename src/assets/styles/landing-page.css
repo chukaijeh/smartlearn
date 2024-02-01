@@ -4,9 +4,10 @@ nav {
   height: 12vh;
   align-items: center;
 }
-nav header{
-    display: flex;
-    align-items: center;
+
+nav header {
+  display: flex;
+  align-items: center;
 }
 nav header .App-logo {
   height: 25px;
@@ -26,9 +27,9 @@ nav ul li {
 nav ul li {
   margin-inline: 15px;
 }
-nav ul li:hover .line{
-    width: 100%;
-    transition: .5s;
+nav ul li:hover .line {
+  width: 100%;
+  transition: 0.5s;
 }
 nav button {
   padding: 12px 45px 12px 45px;
@@ -46,32 +47,146 @@ nav .btn .signin {
   color: var(--app-white);
 }
 .intro {
-    height: 800px;
-    background: #F5F7FA;padding-top: 45px;
+  height: 800px;
+  background: #f5f7fa;
+  padding-top: 45px;
 }
-.intro .contain-all{
-    margin: auto;
-    width: 90%;
+.intro .contain-all {
+  margin: auto;
+  width: 90%;
 }
-.intro .contain-all .intro-text{
-    display: flex;
+.intro .contain-all .intro-text {
+  display: flex;
 }
-.intro .contain-all .intro-text h1{
-    font-size: 2.5rem;
-    font-weight: 600;
+.intro .contain-all .intro-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
 }
-.intro .contain-all .intro-text-desc{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-right: 80px;
+.intro .contain-all .intro-text-desc {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-right: 80px;
 }
-.intro img{
-    width: 100%;
+.intro img {
+  width: 100%;
 }
-.line{
-    height: 2px;
-    width: 0;
-    background-color: var(--primary-color);
-    transition: .5s;
+.line {
+  height: 2px;
+  width: 0;
+  background-color: var(--primary-color);
+  transition: 0.5s;
+}
+.contain-categories {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  gap: 5%;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+.contain-categories .each-item {
+  padding: 15px;
+  background: #ebebff;
+  display: flex;
+}
+.contain-categories .each-item .ico {
+  width: 70px;
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-categories .each-item .text {
+  margin: 10px 0 0 15px;
+}
+.categories h1 {
+  margin: 20px auto;
+  width: fit-content;
+}
+.categories .last-text {
+  margin: auto;
+  margin-block: 25px;
+  width: fit-content;
+}
+.third-section {
+  background: #f5f7fa;
+  height: 70vh;
+}
+.third-section .contain-main {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  padding-top: 50px;
+  display: flex;
+}
+.third-section .contain-main .third-desc {
+  padding-right: 25px;
+  margin-block: 10px;
+  width: 55%;
+}
+.third-section .contain-main .third-desc h1 {
+  line-height: 1.5em;
+  font-size: 2em;
+}
+.third-section .contain-main .third-desc p {
+  margin-block: 10px;
+}
+.third-section .contain-main .third-img {
+  width: 45%;
+  margin: auto;
+}
+.third-section .contain-main .third-img img {
+  width: 100%;
+}
+.third-section .contain-main .third-img img {
+  height: 100%;
+}
+.fourth-section {
+  padding-block: 25px;
+}
+.fourth-section #firstheading,
+.fourth-section #first-p {
+  margin: auto;
+  width: fit-content;
+  margin-block: 5px;
+}
+.fourth-section .courses {
+  width: 90%;
+  margin: auto;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-evenly;
+}
+.fourth-section .courses img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.fourth-section .course {
+  width: 22%;
+  border: 1px solid #ccc;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  height: fit-content;
+}
+.fourth-section .course p {
+  width: 90%;
+  margin: 5px 15px;
+}
+.fourth-section .course button {
+  width: 90%;
+  margin: 5px 15px;
+  padding: 10px;
+  background-color: #edecff;
+  border: none;
+  color: var(--primary-color);
+  border-radius: 3px;
+}
+.long-line {
+  height: 1px;
+  background-color: #ccc;
+  margin-block: 3px;
 }
