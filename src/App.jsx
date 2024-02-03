@@ -86,24 +86,23 @@ export default function App() {
           <img src={logo} className="App-logo title" alt="logo" />
           <span className="App-title title">SmartLearn</span>
         </header>
-        <ul>
-          <li><a href={"#home"}>Home</a>
-            <div className="line"></div></li>
-          <li><a href={"#about"}>About</a>
-            <div className="line"></div></li>
-          <li><a href="#courses">Courses</a>
-            <div className="line"></div></li>
-          <li><a href={"#instructor"}>Become An Instructor</a>
-            <div className="line"></div></li>
-          <li><a href={"#blog"}>Blog</a>
-            <div className="line"></div></li>
-        </ul>
+        <Menu />
         <div className="btn">
           <Link to={"/auth/signup"}>
-            <button className="signup"><div className="flow"></div><span>Sign up</span></button>
+            <button className="signup">
+              <div className="flow">
+                <span>Sign up</span>
+              </div>
+              <span>Sign up</span>
+            </button>
           </Link>
           <Link to={"/auth/login"}>
-            <button className="signin"><div className="flow"></div><span>Sign in</span></button>
+            <button className="signin">
+              <div className="flow">
+                <span>Sign in</span>
+              </div>
+              <span>Sign in</span>
+            </button>
           </Link>
         </div>
       </nav>
@@ -202,7 +201,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="fifth-section">
+      <section className="fifth-section" id='instructor'>
         <div className="instructor">
           <h1 className='align-text'>Become an instructor</h1>
           <p className='align-text'>Instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.</p>
@@ -242,25 +241,78 @@ export default function App() {
               <div className="ratings flex flex-between"><span>4.8</span><span>50 students</span></div>
             </div>
           </div>
-          <div class="center-text"><span className='fade-text'>Thousands of students waiting for a instructor. Start teaching & earning now! </span><a href="#" style={{color: "var(--primary-color)"}}>Become Instructor</a></div>
-        </div>
-        <div className="trusted-companies">
-          <div className="trusted-companies-desc">
-          <h1>50+ trusted companies</h1>
-          <p>Here’s an overview of the numerous companies that trust us!</p>
-          </div>
-          <div className="trusted-companies-logo">
-          <div className="companies-logo"><img src={youtube} alt="" /></div>
-          <div className="companies-logo"><img src={netflix} alt="" /></div>
-          <div className="companies-logo"><img src={slack} alt="" /></div>
-          <div className="companies-logo"><img src={google} alt="" /></div>
-          <div className="companies-logo"><img src={lenovo} alt="" /></div>
-          <div className="companies-logo"><img src={verizon} alt="" /></div>
-          <div className="companies-logo"><img src={lexmark} alt="" /></div>
-          <div className="companies-logo"><img src={youtube} alt="" /></div>
+          <div class="center-text"><span className='fade-text'>Thousands of students waiting for an instructor. Start teaching & earning now! </span><a href="#" style={{ color: "var(--primary-color)" }}>Become Instructor</a></div>
+          <div className="trusted-companies">
+            <div className="trusted-companies-desc">
+              <h1>50+ trusted companies</h1>
+              <p>Here's an overview of the numerous companies that trust us!</p>
+            </div>
+            <div className="trusted-companies-logo">
+              <div className="companies-logo"><img src={youtube} alt="" /></div>
+              <div className="companies-logo"><img src={netflix} alt="" /></div>
+              <div className="companies-logo"><img src={slack} alt="" /></div>
+              <div className="companies-logo"><img src={google} alt="" /></div>
+              <div className="companies-logo"><img src={lenovo} alt="" /></div>
+              <div className="companies-logo"><img src={verizon} alt="" /></div>
+              <div className="companies-logo"><img src={lexmark} alt="" /></div>
+              <div className="companies-logo"><img src={microsoft} alt="" /></div>
+            </div>
           </div>
         </div>
       </section>
+      <footer id='blog'>
+        <div className="contain-footer-items">
+          <div className="aim">
+            <img src={logo} alt="" width={30} height={20} /><span>SmartLearn</span>
+            <p>Build and create dreams with <br />SmartLearn</p>
+          </div>
+          <aside>
+            <div className="social">
+              <p>Social Media</p>
+              <ul>
+                <li><Link to={''}>Instagram</Link></li>
+                <li><Link to={''}>Twitter</Link></li>
+                <li><Link to={''}>LinkedIn</Link></li>
+              </ul>
+            </div>
+            <div className="quick-links">
+              <p>Quick Links</p>            <ul>
+                <li><Link to={''}>Terms and conditions</Link></li>
+                <li><Link to={''}>Faqs</Link></li>
+              </ul>
+            </div>
+            <div className="contact">
+              <p>Contact</p>
+              <ul>
+                <li><Link to={''}>Smartlearn@gmail.com</Link></li>
+                <li><Link to={''}>+234-962-543-534</Link></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </footer>
+      <section className="copyright flex flex-center-column flex-around">
+      <div className="contain-copyright">
+          © Copyright SmartLearn 2024
+      </div>
+      <Menu />
+      </section>
     </div>
+  )
+}
+function Menu(params) {
+  return (
+    <ul className='nav-footer'>
+      <li><a href={"#home"}>Home</a>
+        <div className="line"></div></li>
+      <li><a href={"#about"}>About</a>
+        <div className="line"></div></li>
+      <li><a href="#courses">Courses</a>
+        <div className="line"></div></li>
+      <li><a href={"#instructor"}>Become An Instructor</a>
+        <div className="line"></div></li>
+      <li><a href={"#blog"}>Blog</a>
+        <div className="line"></div></li>
+    </ul>
   )
 }
