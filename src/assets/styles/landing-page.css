@@ -35,7 +35,7 @@ nav ul li:hover .line {
   width: 100%;
   transition: 0.5s;
 }
-nav button {
+nav button, .intro .btn button {
   padding: 12px 45px 12px 45px;
   margin-inline: 10px;
   border: none;
@@ -44,17 +44,17 @@ nav button {
   position: relative;
 }
 
-nav .btn .signup {
+.signup {
   background: #edecff;
   color: var(--primary-color);
 }
-nav .btn .signin {
+.signin{
   background: var(--primary-color);
   color: var(--app-white);
 }
 
 /* Button Flow Effect start*/
-nav button .flow {
+nav button .flow, .intro .btn button .flow {
   position: absolute;
   height: 100%;
   width: 0;
@@ -63,22 +63,22 @@ nav button .flow {
   top: 0;
   transition: 0.2s;
 }
-nav .btn .signup .flow {
+ .btn .signup .flow {
   background: var(--primary-color);
   color: #edecff;
 }
-nav .btn .signin .flow {
+ .btn .signin .flow {
   background: #edecff;
   color:  var(--primary-color);
 }
-nav .btn button:hover .flow{
+ .btn button:hover .flow{
   padding: inherit;
   width: 100%;
 }
 /* Button Flow Effect End */
 
 .intro {
-  height: 800px;
+  height: fit-content;
   background: #f5f7fa;
   padding-top: 45px;
 }
@@ -88,16 +88,17 @@ nav .btn button:hover .flow{
 }
 .intro .contain-all .intro-text {
   display: flex;
+  align-items: center;
 }
 .intro .contain-all .intro-text h1 {
   font-size: 2.5rem;
   font-weight: 600;
+  /* width: 65%; */
+  padding-right: 15px;
+  /* padding-inline: 15px; */
 }
-.intro .contain-all .intro-text-desc {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  padding-right: 80px;
+.intro .intro-text p{
+  /* width: 60%; */
 }
 .intro img {
   width: 100%;
@@ -388,4 +389,121 @@ footer aside div ul {
   height: 10vh;
   background-color: #206ef3;
   color: white;
+}
+.bar{
+  display: none;
+  z-index: 999;
+}
+.r-btn{
+ display: none;
+}
+@media (max-width: 800px) {
+  .w-btn{
+    display: none;
+   }
+  .r-btn{
+    display: block;
+    margin-block: 20px;
+   }
+  body{
+    position: relative;
+  }
+  nav{
+    padding-inline: 50px;
+  }
+  .bar{
+    display: block;
+  }
+  .res-menu{
+    position: fixed;
+    background-color: var(--app-white);
+    width: 100%;
+    height: 100vh;
+    right: -100%;
+    top: 0;
+    transition: .5s;
+
+    z-index: 99;
+    color: black; 
+   }
+   .res-menu li:first-child {
+    margin-top: 35px;
+   }
+   .res-menu li {
+    margin: 15px;
+   }
+   .appear{
+    right: 0;
+    transition: .5s;
+   }
+   .contain-categories {
+    grid-template-columns: 4fr 4fr;
+    width: fit-content;
+    margin-bottom: 70px;
+    width: 80%;
+    /* justify-items: center; */
+  }.r-image-h{
+    /* height: 55vh; */
+  }
+   .contain-categories .each-item {
+    padding: 0;
+    width: 100%;
+    /* width: 150px; */
+    height: 70px;
+  }
+ .contain-categories .each-item .ico {
+   width: 40px;
+   height: 40px;
+   background: white;
+  }
+  .contain-categories .each-item .text {
+    font-size: 12px;
+    margin: 0 0 0 7px;
+  } 
+  .categories .last-text {
+    text-align: center;
+    font-size: 12.5px;
+  } 
+
+
+  .third-section {
+    background: #f5f7fa;
+    height: fit-content;
+  }
+  .third-section .contain-main {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding-top: 0;
+    /* display: flex; */
+  }
+  .third-section .contain-main .third-desc {
+    /* padding-right: 25px;
+    margin-block: 10px;*/
+    width: 100%; 
+  }
+  .third-section .contain-main .third-desc h1 {
+    line-height: 1.2em;
+    /* width: 80%; */
+    margin: auto;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .third-section .contain-main .third-desc p {
+    /* margin-block: 10px; */
+    font-size: 14px;
+    text-align: center;
+
+  }
+  .third-section .contain-main .third-img {
+    width: 100%; 
+  }
+  .fourth-section .contain-main .courses {
+    width: 100%;
+    /* height: 100%; */
+    margin: auto;
+    padding-top: 50px;
+    /* display: flex; */
+    flex-direction: column;
+  }
 }

@@ -30,7 +30,12 @@ import ico6 from './assets/images/office.png';
 import ico7 from './assets/images/marketing.png';
 import ico8 from './assets/images/photography.png';
 import ico9 from './assets/images/music.png';
+import { HiBars3CenterLeft } from "react-icons/hi2";
 
+function navigate(e) {
+  const nav  = document.querySelector(".nav-footer")
+  nav.classList.toggle('appear')
+}
 export default function App() {
   const categories = [
     {
@@ -81,42 +86,33 @@ export default function App() {
   ];
   return (
     <div className='App-main'>
-      <nav>
+      <nav className='r-flex-between'>
         <header className="">
           <img src={logo} className="App-logo title" alt="logo" />
           <span className="App-title title">SmartLearn</span>
         </header>
         <Menu />
-        <div className="btn">
-          <Link to={"/auth/signup"}>
-            <button className="signup">
-              <div className="flow">
-                <span>Sign up</span>
-              </div>
-              <span>Sign up</span>
-            </button>
-          </Link>
-          <Link to={"/auth/login"}>
-            <button className="signin">
-              <div className="flow">
-                <span>Sign in</span>
-              </div>
-              <span>Sign in</span>
-            </button>
-          </Link>
+        <div className="w-btn">
+       <LoginButton />
         </div>
+       <div className="bar">
+        <HiBars3CenterLeft style={{fontSize: "22px"}} onClick={navigate}/>
+       </div>
       </nav>
       <section className="intro" id='home'>
         <div className="contain-all">
-          <div className="intro-text">
+          <div className="intro-text r-flex-column r-center-text">
             <h1>Welcome to Smart<span style={{ color: "var(--primary-color)" }}>Learn</span> Smart-hub for Smart Kids</h1>
-            <div className="intro-text-desc">
+            {/* <div className="intro-text-desc"> */}
               <p>
                 Our mission is bringing quality education and resources to out of school children from low income house-hold
               </p>
+            {/* </div> */}
+            <div className="r-btn">
+            <LoginButton />
             </div>
           </div>
-          <img src={pupil} alt="" />
+          <img src={pupil} alt="" className='r-image-h'/>
         </div>
       </section>
       <section className="categories">
@@ -125,7 +121,7 @@ export default function App() {
           {
             categories.map((each) => {
               return (
-                <div className="each-item ">
+                <div className="each-item r-flex-center-column r-flex-center-row">
                   <div className="ico">
                     <img src={each.logo} alt={each.topic} />
                   </div>
@@ -143,7 +139,7 @@ export default function App() {
         </div>
       </section>
       <section className="third-section" id='about'>
-        <div className="contain-main">
+        <div className="contain-main r-flex-column">
           <div className="third-desc flex flex-center-row flex-column">
             <p>About Us</p>
             <h1>
@@ -241,7 +237,7 @@ export default function App() {
               <div className="ratings flex flex-between"><span>4.8</span><span>50 students</span></div>
             </div>
           </div>
-          <div class="center-text"><span className='fade-text'>Thousands of students waiting for an instructor. Start teaching & earning now! </span><a href="#" style={{ color: "var(--primary-color)" }}>Become Instructor</a></div>
+          <div className="center-text"><span className='fade-text'>Thousands of students waiting for an instructor. Start teaching & earning now! </span><a href="#" style={{ color: "var(--primary-color)" }}>Become Instructor</a></div>
           <div className="trusted-companies">
             <div className="trusted-companies-desc">
               <h1>50+ trusted companies</h1>
@@ -302,17 +298,40 @@ export default function App() {
 }
 function Menu(params) {
   return (
-    <ul className='nav-footer'>
-      <li><a href={"#home"}>Home</a>
+    <ul className='nav-footer res-menu r-flex-column'>
+      <li onClick={navigate}><a href={"#home"}>Home</a>
         <div className="line"></div></li>
-      <li><a href={"#about"}>About</a>
+      <li onClick={navigate}><a href={"#about"}>About</a>
         <div className="line"></div></li>
-      <li><a href="#courses">Courses</a>
+      <li onClick={navigate}><a href="#courses">Courses</a>
         <div className="line"></div></li>
-      <li><a href={"#instructor"}>Become An Instructor</a>
+      <li onClick={navigate}><a href={"#instructor"}>Become An Instructor</a>
         <div className="line"></div></li>
-      <li><a href={"#blog"}>Blog</a>
+      <li onClick={navigate}><a href={"#blog"}>Blog</a>
         <div className="line"></div></li>
     </ul>
+  )
+}
+function LoginButton(params) {
+  return(
+    <>
+     <div className="btn">
+          <Link to={"/auth/signup"}>
+            <button className="signup">
+              <div className="flow">
+                <span>Sign up</span>
+              </div>
+              <span>Sign up</span>
+            </button>
+          </Link>
+          <Link to={"/auth/login"}>
+            <button className="signin">
+              <div className="flow">
+                <span>Sign in</span>
+              </div>
+              <span>Sign in</span>
+            </button>
+          </Link>
+        </div></>
   )
 }
