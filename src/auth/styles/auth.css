@@ -1,12 +1,10 @@
-.auth-header {
+.auth-header,.landing-header {
   height: 12vh;
   width: 85%;
   margin: auto;
 }
 .landing-header {
-  height: 12vh;
   width: fit-content;
-  margin: auto;
 }
 .auth-header .title {
   margin-top: 25px;
@@ -20,7 +18,7 @@
   margin-left: 10px;
 }
 .auth-main {
-  width: 100%;
+  width: 85%;
   height: 120vh;
   margin: auto;
   display: flex;
@@ -30,7 +28,7 @@
   height: 100%;
 }
 .bg-image {
-  width: 100%;
+  width: 55%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url(../../assets/images/auth-bg.jpg);
   background-position: center;
@@ -52,7 +50,7 @@
 }
 .contain-form {
   background-color: var(--main-color);
-  width: 100%;
+  width: 45%;
 }
 .contain-form form {
   width: 80%;
@@ -123,4 +121,29 @@ form .line {
 }
 .split .center-text {
   padding-inline: 20px;
+}
+@media (max-width: 800px) {
+  p, input{
+    font-size: 14px;
+  }
+
+  .auth-header {
+    /* height: 9.5vh; */
+    padding: auto;
+    width: 85%;
+    margin: auto;
+  }
+  .auth-main{
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .auth-main .bg-image, .contain-form{
+    width: 100%;
+  }
+  .bg-image{
+    height: 40%;
+  }
+  .contain-form{
+    height: 60%;
+  }
 }
