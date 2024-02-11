@@ -157,8 +157,8 @@ export default function App() {
       <section className="fourth-section" id='courses'>
         <h1 id='firstheading'>Trending Courses</h1>
         <p className='fade-text' id='first-p'>Take a look at the trending courses for the week</p>
-        <div className="courses">
-          <div className="course">
+        <div className="courses  ">
+          <div className="course flex flex-column flex-center-column">
             <img src={programming} alt="" />
             <div className="text-p">
               <p className='bold'>Computer programming</p>
@@ -167,7 +167,7 @@ export default function App() {
             <div className="long-line"></div>
             <button>Watch Video</button>
           </div>
-          <div className="course">
+          <div className="course flex flex-column flex-center-column">
             <img src={graph} alt="" />
             <div className="text-p">
               <p className='bold'>Digital Marketing</p>
@@ -176,7 +176,7 @@ export default function App() {
             <div className="long-line"></div>
             <button>Watch Video</button>
           </div>
-          <div className="course">
+          <div className="course flex flex-column flex-center-column">
             <img src={plan} alt="" />
             <div className="text-p">
               <p className='bold'>Data Science</p>
@@ -185,7 +185,7 @@ export default function App() {
             <div className="long-line"></div>
             <button>Watch Video</button>
           </div>
-          <div className="course">
+          <div className="course flex flex-column flex-center-column">
             <img src={study} alt="" />
             <div className="text-p">
               <p className='bold'>SQL for newbies</p>
@@ -202,7 +202,7 @@ export default function App() {
           <h1 className='align-text'>Become an instructor</h1>
           <p className='align-text'>Instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.</p>
           <button>Start Teaching</button>
-          <img src={instructor} alt="ibecome an instructor" />
+          <img src={instructor} alt="become an instructor" />
         </div>
         <div className="instructor">
           <h1>Your teaching & earning steps</h1>
@@ -237,9 +237,9 @@ export default function App() {
               <div className="ratings flex flex-between"><span>4.8</span><span>50 students</span></div>
             </div>
           </div>
-          <div className="center-text"><span className='fade-text'>Thousands of students waiting for an instructor. Start teaching & earning now! </span><a href="#" style={{ color: "var(--primary-color)" }}>Become Instructor</a></div>
-          <div className="trusted-companies">
-            <div className="trusted-companies-desc">
+          <div className="center-text th"><span className='fade-text'>Thousands of students waiting for an instructor. Start teaching & earning now! </span><a href="#" style={{ color: "var(--primary-color)" }}>Become Instructor</a></div>
+          <div className="trusted-companies flex flex-around r-flex-column r-flex-center-column">
+            <div className="trusted-companies-desc r-center-text">
               <h1>50+ trusted companies</h1>
               <p>Here's an overview of the numerous companies that trust us!</p>
             </div>
@@ -257,12 +257,12 @@ export default function App() {
         </div>
       </section>
       <footer id='blog'>
-        <div className="contain-footer-items">
+        <div className="contain-footer-items flex r-flex-column">
           <div className="aim">
             <img src={logo} alt="" width={30} height={20} /><span>SmartLearn</span>
             <p>Build and create dreams with <br />SmartLearn</p>
           </div>
-          <aside>
+          <aside className='flex flex-around flex-center-column'>
             <div className="social">
               <p>Social Media</p>
               <ul>

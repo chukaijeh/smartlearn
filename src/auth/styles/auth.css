@@ -20,7 +20,7 @@
   margin-left: 10px;
 }
 .auth-main {
-  width: 85%;
+  width: 100%;
   height: 120vh;
   margin: auto;
   display: flex;
@@ -30,7 +30,7 @@
   height: 100%;
 }
 .bg-image {
-  width: 55%;
+  width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url(../../assets/images/auth-bg.jpg);
   background-position: center;
@@ -52,7 +52,7 @@
 }
 .contain-form {
   background-color: var(--main-color);
-  width: 45%;
+  width: 100%;
 }
 .contain-form form {
   width: 80%;

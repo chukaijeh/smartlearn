@@ -62,6 +62,7 @@ nav button .flow, .intro .btn button .flow {
   left: 0;
   top: 0;
   transition: 0.2s;
+  opacity: 0;
 }
  .btn .signup .flow {
   background: var(--primary-color);
@@ -74,6 +75,7 @@ nav button .flow, .intro .btn button .flow {
  .btn button:hover .flow{
   padding: inherit;
   width: 100%;
+  opacity: 1;
 }
 /* Button Flow Effect End */
 
@@ -93,12 +95,7 @@ nav button .flow, .intro .btn button .flow {
 .intro .contain-all .intro-text h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  /* width: 65%; */
   padding-right: 15px;
-  /* padding-inline: 15px; */
-}
-.intro .intro-text p{
-  /* width: 60%; */
 }
 .intro img {
   width: 100%;
@@ -137,6 +134,7 @@ nav button .flow, .intro .btn button .flow {
 .categories h1 {
   margin: 20px auto;
   width: fit-content;
+  font-size: 1em;
 }
 .categories .last-text {
   margin: auto;
@@ -160,7 +158,7 @@ nav button .flow, .intro .btn button .flow {
   width: 55%;
 }
 .third-section .contain-main .third-desc h1 {
-  line-height: 1.5em;
+  line-height: 1em;
   font-size: 2em;
 }
 .third-section .contain-main .third-desc p {
@@ -202,18 +200,19 @@ nav button .flow, .intro .btn button .flow {
   border: 1px solid #ccc;
   padding-bottom: 10px;
   border-radius: 3px;
-  height: fit-content;
 }
 .fourth-section .course p {
   width: 90%;
   margin: 5px 15px;
+  height: fit-content;
 }
 .fourth-section .course .text-p {
   height: 12vh;
+  width: 100%;
 }
 .fourth-section .course button {
   width: 90%;
-  margin: 5px 15px;
+  margin: 5px;
   padding: 10px;
   background-color: #edecff;
   border: none;
@@ -222,6 +221,7 @@ nav button .flow, .intro .btn button .flow {
 }
 .long-line {
   height: 1px;
+  width: 100%;
   background-color: #ccc;
   margin-block: 3px;
 }
@@ -288,7 +288,7 @@ nav button .flow, .intro .btn button .flow {
   font-weight: 700;
 }
 .sixth-section {
-  height: 85vh;
+  height: 95vh;
 }
 .sixth-section .ontop {
   width: 85%;
@@ -325,13 +325,9 @@ nav button .flow, .intro .btn button .flow {
   padding: 5px;
 }
 .trusted-companies {
-  display: flex;
-  /* width: 80%; */
-  /* margin: 45px auto; */
-  padding: 50px;
-  justify-content: space-around;
+  margin-top: 17px;
+  padding-block: 25px;
   height: fit-content;
-  /* background-color: yellow; */
 }
 .trusted-companies-desc h1 {
   font-size: 33px;
@@ -354,10 +350,9 @@ nav button .flow, .intro .btn button .flow {
   width: 55%;
 }
 footer {
-  height: 40vh;
+  height: fit-content;
   background: #151425;
   color: white;
-  position: relative;
 }
 footer .aim {
   padding: 40px 75px;
@@ -367,13 +362,7 @@ footer .aim {
 footer .aim span {
   margin-left: 10px;
 }
-footer .contain-footer-items {
-  display: flex;
-}
 footer aside {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   width: 65%;
 }
 footer aside div {
@@ -397,7 +386,7 @@ footer aside div ul {
 .r-btn{
  display: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .w-btn{
     display: none;
    }
@@ -410,6 +399,7 @@ footer aside div ul {
   }
   nav{
     padding-inline: 50px;
+    font-size: 14px;
   }
   .bar{
     display: block;
@@ -441,14 +431,10 @@ footer aside div ul {
     width: fit-content;
     margin-bottom: 70px;
     width: 80%;
-    /* justify-items: center; */
-  }.r-image-h{
-    /* height: 55vh; */
   }
    .contain-categories .each-item {
     padding: 0;
     width: 100%;
-    /* width: 150px; */
     height: 70px;
   }
  .contain-categories .each-item .ico {
@@ -464,8 +450,6 @@ footer aside div ul {
     text-align: center;
     font-size: 12.5px;
   } 
-
-
   .third-section {
     background: #f5f7fa;
     height: fit-content;
@@ -475,22 +459,17 @@ footer aside div ul {
     height: 80%;
     margin: auto;
     padding-top: 0;
-    /* display: flex; */
   }
   .third-section .contain-main .third-desc {
-    /* padding-right: 25px;
-    margin-block: 10px;*/
     width: 100%; 
   }
   .third-section .contain-main .third-desc h1 {
     line-height: 1.2em;
-    /* width: 80%; */
     margin: auto;
     font-size: 1.2em;
     text-align: center;
   }
   .third-section .contain-main .third-desc p {
-    /* margin-block: 10px; */
     font-size: 14px;
     text-align: center;
 
@@ -498,12 +477,139 @@ footer aside div ul {
   .third-section .contain-main .third-img {
     width: 100%; 
   }
-  .fourth-section .contain-main .courses {
+  .fourth-section {
+    padding-block: 0;
+  }
+  .fourth-section  .courses {
     width: 100%;
-    /* height: 100%; */
-    margin: auto;
-    padding-top: 50px;
-    /* display: flex; */
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+  .fourth-section .courses img {
+    height: 22vh;
+  }
+  .fourth-section .course .text-p {
+    height: fit-content;
+    padding-inline: 5px;
+  }
+  .fourth-section .course p {
+    width: 100%;
+    margin: 0;
+  }
+  .fourth-section .course {
+    font-size: 11px;
+    width: auto;
+    border: 1px solid #ccc;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    margin: 15px 5px; 
+    justify-self: center;
+  }
+  .fourth-section #firstheading{
+    font-size: 1em;
+  }
+.fourth-section #first-p {
+  font-size: .75rem;
+}
+.fifth-section {
+  height: fit-content;
+  padding: 40px 0;
+  display: block;
+}
+.fifth-section .instructor {
+  width: 100%;
+  font-size: 13px;
+  height: fit-content;
+  padding-block: 10px;
+  margin: 30px 0 ;
+}
+.fifth-section .instructor:first-child .align-text {
+  width: 60%;
+  margin: 10px;
+}
+.fifth-section .instructor:first-child button {
+  padding: 15px 40px 15px 40px;
+  margin-left: 10px;
+}
+
+.fifth-section .instructor img {
+  right: 0;
+}
+.sixth-section {
+  height: fit-content;
+}
+.sixth-section .ontop {
+  width: 100%;
+  position: static;
+}
+.sixth-section .ontop h1{
+  font-size: 20px;
+}
+.ontop .teachers {
+  width: 100%;
+  margin: 30px auto;
+}
+.ontop .teachers .teacher {
+  width: 30%;
+  margin: 10px 5px;
+  height: fit-content;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.ontop .teachers .teacher div{
+  font-size: 11px;
+}
+.ontop .teachers .teacher p{
+  font-size: 12px;
+}
+.ontop .th{
+  font-size: 14px;
+}
+.trusted-companies-logo {
+  width: 80%;
+}
+.trusted-companies-desc {
+  padding: 12px;
+}
+.trusted-companies-desc h1 {
+  font-size: 20px;
+}
+.trusted-companies-desc p {
+  font-size: 12px;
+}
+.companies-logo {
+  height: fit-content;
+  width: 18vw;
+  padding: 0;
+}
+.companies-logo img {
+  margin: auto;
+  width: 80%;
+}
+footer{
+  font-size: 12px;
+}
+footer .aim {
+  padding: 20px;
+  width: 100%;
+  line-height: 2rem;
+}
+footer .aim span {
+  margin-left: 0;
+} 
+footer aside {
+  width: 100%;
+}
+footer aside div {
+  margin: 0;
+  height: fit-content;
+  padding: 25px 10px ;
+  font-size: 11px;
+}
+}
+@media (max-width: 360px) {
+  .fifth-section .instructor img {
+    /* height: 80%; */
+    width: 120px;
   }
 }

@@ -11,7 +11,7 @@ function SignUp() {
     <Link to={"/"}>
         <Header />
     </Link>
-      <div className="auth-main">
+      <div className="auth-main r-flex r-flex-column">
         <div className='bg-image main-common'>
           <div className='contain-text'>
             <h1>You're only one sign-up <br /> away from greatness!</h1>

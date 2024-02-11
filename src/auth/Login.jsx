@@ -7,7 +7,8 @@ function Login(params) {
     return (<div>
         <Link to={"/"}>
             <Header />
-        </Link>        <div className="auth-main">
+        </Link>        
+        <div className="auth-main r-flex r-flex-column">
             <div className='bg-image main-common bg-image-lg'>
                 <div className='contain-text'>
                     <h1>Login and let's make <br /> magic happen!</h1>
