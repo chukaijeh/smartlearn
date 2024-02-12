@@ -118,6 +118,13 @@ form .line {
 form small{
   color: red;
 }
+form #success{
+  color: rgb(31, 193, 31);
+  font-style: italic;
+  font-weight: 600;
+  font-family: segoe print;
+}
+
 .split {
   display: flex;
   align-items: center;

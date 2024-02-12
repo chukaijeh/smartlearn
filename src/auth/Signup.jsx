@@ -12,6 +12,7 @@ function SignUp() {
   const [firstNameError, updateFirstNameError] = useState("")
   const [lastNameError, updateLastNameError] = useState("")
   const [emailError, updateEmailError] = useState("")
+  const [userAccountSuccessful, updateUserAccountSuccessful] = useState("")
   const [passwordError, updatePasswordError] = useState("")
 async function validate(e) {
   updateEmailError("")
@@ -50,8 +51,10 @@ async function validate(e) {
       condition = false;
     }
     if (condition){
-      let error = await createAccount({ firstname, lastname, email, passwd })
-      updateEmailError(error.message)
+      let res = await createAccount({ firstname, lastname, email, passwd })
+      console.log(res);
+      res.status ? updateUserAccountSuccessful(res.message) : updateEmailError(res.message)
+
     }
   }
   return (
@@ -82,6 +85,7 @@ async function validate(e) {
             <input type="password" placeholder='Pas*****' className='inputfield' />
             <small>{passwordError}</small>
             <input type="submit" id='submit' value={"Sign up"}/>
+            <div id="success">{userAccountSuccessful}</div>
             <div className="split">
               <div className="line"></div>
               <span className="center-text"> Or </span>
