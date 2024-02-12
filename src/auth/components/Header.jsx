@@ -1,7 +1,6 @@
 import logo from '../../assets/images/logo-dark.png';
 
-export function Header(params) {
-    console.log(params);
+export function Header() {
     return (
         <header className="auth-header">
             <img src={logo} className="App-logo title" alt="logo" />
