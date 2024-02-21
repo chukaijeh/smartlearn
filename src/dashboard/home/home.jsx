@@ -8,6 +8,7 @@ export default function Home() {
         <div className="home">
               <div className="page-content">
                  <p>Home Page</p>
+                 <p>Testing out git</p>
               </div>
             
         </div>
