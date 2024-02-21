@@ -6,6 +6,10 @@ import Main from "./dashboard/Main";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import Courses from "./dashboard/courses/courses";
+import LiveClass from "./dashboard/liveClass/live-class";
+import Forum from "./dashboard/forum/forum";
+import LearningReport from "./dashboard/learningReport/learning-report";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +27,22 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Main />,
+  },
+  {
+    path: "/courses",
+    element: <Courses />,
+  },
+  {
+    path: "/live-class",
+    element: <LiveClass/>,
+  },
+  {
+    path: "/forum",
+    element: <Forum />,
+  },
+  {
+    path: "/learning-report",
+    element: <LearningReport />,
   },
 ]);
 

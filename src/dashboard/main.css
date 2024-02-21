@@ -1,0 +1,31 @@
+.home {
+    display: flex;
+}
+
+.homeContainer {
+    background-color: #F7F8FC;
+    flex: 6;
+    /* padding: 1rem 2rem; */
+}
+
+.widgets,
+.charts {
+    padding-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.charts {
+    padding-top: 1rem;
+    gap: 0px;
+}
+
+.statistics {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+.page-content{
+    margin: 2rem 3rem;
+}
