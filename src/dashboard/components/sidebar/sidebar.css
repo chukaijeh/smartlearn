@@ -1,9 +1,17 @@
+/* .sidebar {
+    flex: 1.1;
+    border-right: 0.5px solid rgb(226, 226, 226);
+    background: var(--sidebar-bg, #151425);
+    min-height: 165vh;
+} */
 .sidebar {
     flex: 1.1;
     border-right: 0.5px solid rgb(226, 226, 226);
     background: var(--sidebar-bg, #151425);
     min-height: 165vh;
+    /* position: fixed; */
 }
+
 
 .top {
     height: 50px;

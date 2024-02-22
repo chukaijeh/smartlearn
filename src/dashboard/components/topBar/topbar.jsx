@@ -9,8 +9,8 @@ const NavBar = () => {
         <div className="wrapper">
            <div>
            <div className="search-container">
-          <i className="search-icon fas fa-search"></i> 
-          <input type="text" className="search-input" placeholder="Search anything" />
+            <i className="search-icon fas fa-search"></i> 
+            <input type="text" className="search-input" placeholder="Search anything" />
           </div>
            </div>
             <div className="navIconbar">
