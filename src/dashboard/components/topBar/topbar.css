@@ -5,6 +5,9 @@
     display: flex;
     background-color: #FFF;
     padding: 0 4rem;
+    /* position: fixed;
+    width: 85%;
+    right: 0; */
 }
 
 .wrapper {
