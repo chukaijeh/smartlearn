@@ -30,8 +30,20 @@ a{
 .flex-around{justify-content: space-around;}
 .flex-between{justify-content: space-between;}
 .flex-evenly{justify-content: space-evenly;}
+
 .fade-text{opacity: .8;}
 .center-text{text-align: center;}
+.bold-1{font-weight: 600;}
+.bold-2{font-weight: 700;}
+.bold-3{font-weight: 800;}
+.bold-4{font-weight: 900;}
+.small-text{font-size: .8rem;}
+.small-text1{font-size: .9rem;}
+.normal-text{font-size: 1rem;}
+.medium-text{font-size: 1.2rem;}
+.big-text{font-size: 1.5rem;}
+.bigger-text{font-size: 2rem;}
+
 ::-webkit-scrollbar {
   width: 7px;
 }

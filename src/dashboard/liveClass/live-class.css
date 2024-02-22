@@ -1,0 +1,75 @@
+
+.page-content nav span:last-child{
+    margin-left: 10px;
+  }
+  .live-classes section{
+    padding-top: 20px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: white;
+    height: 40vh;
+    margin-block: 15px;
+    margin-inline: 10px;
+    box-shadow: .5px .4px 2px #ccc;
+  }
+  .live-classes section .subject{
+    display: block;
+    padding: 10px 0 20px 25px;
+  }
+  .live-classes section .live{
+    margin: 25px;
+  }
+
+  .contain-up-classes{
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    row-gap: 17px;
+    column-gap: 15px;
+  }
+  .contain-up-classes .up-classes{
+    background-color: white;
+    border-radius: 8px;
+  }
+  .contain-up-classes .up-classes .line{
+    height: 1px;
+    margin-inline: 2px;
+    background-color: #ccc;
+    width: 90%;
+    margin: auto;
+  }
+  .contain-up-classes .up-classes .image{
+    position: relative;
+    }
+  .indicate-upcoming{
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    padding: 5px 3px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 3px;
+    color: white;
+  }
+  .contain-up-classes .up-classes .image img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .contain-up-classes .up-classes .desc{
+    padding: 8px 0 25px 0;
+    line-height: 1.5em;
+    width: 90%;
+    margin: auto;
+    height: 100px;
+  }
+  .contain-up-classes .up-classes .time-teacher{
+    padding-block: 8px;
+  }
+  @media (max-width: 800px) {
+    .contain-up-classes{
+      display: grid;
+      grid-template-columns: 250px 250px;
+      row-gap: 17px;
+      column-gap: 15px;
+    }
+  }
