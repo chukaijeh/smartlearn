@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect}from 'react'
 import '../main.css'
 import './home.css'
 import courses from '../../assets/images/home-courses.png'
@@ -28,12 +28,32 @@ const style = {
 
 export default function Home() {
     const [open, setOpen] = React.useState(false)
+    const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
+    const [user, setUser] = useState({});
+    // Modal
     const closeModal = () => {
         setOpen(false)
     };
     const openModal = () => {
         setOpen(true)
     }
+    useEffect(() => {
+        const fetchData = async () => {
+          try{
+            const response = await fetch('https://smart-learn-b3p2.onrender.com/api/users/profile/65d7375ad5d7c64f7d08527c');
+            if(!response.ok) {
+              throw new Error ('failed to fetch data')
+            }
+            const jsonData = await response.json();
+            setData(jsonData);
+            setUser(jsonData.user);
+          } catch(error){
+            setError('error fetching details')
+          }
+        };
+        fetchData()
+        }, []);
     return (
         <div className="homee">
               <div className="page-content">
@@ -73,7 +93,7 @@ export default function Home() {
                  </div>
                  {/* Start Learning */}
                  <div className='start-learning-div'>
-                    <p className='start-learning-test'>Let’s start learning, Uthred</p>
+                    <p className='start-learning-test'>Let’s start learning, {user.firstname}</p>
                     <div className='learning-course-div'>
                      <div className="course-div">
                       <img src={biology} alt="" className='home-image'  />
