@@ -12,7 +12,7 @@ export default function Courses() {
             <div className="homeContainer">
               <NavBar/>
               <div className="page-content">
-                 <p>Courses Page</p>
+                 <p>Courses Page 1</p>
               </div>
             </div>
         </div>
