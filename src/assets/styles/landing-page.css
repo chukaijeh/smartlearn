@@ -1,4 +1,4 @@
-nav {
+.App-main nav {
   display: flex;
   justify-content: space-around;
   height: 12vh;
