@@ -30,7 +30,12 @@ import ico6 from './assets/images/office.png';
 import ico7 from './assets/images/marketing.png';
 import ico8 from './assets/images/photography.png';
 import ico9 from './assets/images/music.png';
+import { HiBars3CenterLeft } from "react-icons/hi2";
 
+function navigate(e) {
+  const nav  = document.querySelector(".nav-footer")
+  nav.classList.toggle('appear')
+}
 export default function App() {
   const categories = [
     {
@@ -81,42 +86,33 @@ export default function App() {
   ];
   return (
     <div className='App-main'>
-      <nav>
+      <nav className='r-flex-between'>
         <header className="">
           <img src={logo} className="App-logo title" alt="logo" />
           <span className="App-title title">SmartLearn</span>
         </header>
         <Menu />
-        <div className="btn">
-          <Link to={"/auth/signup"}>
-            <button className="signup">
-              <div className="flow">
-                <span>Sign up</span>
-              </div>
-              <span>Sign up</span>
-            </button>
-          </Link>
-          <Link to={"/auth/login"}>
-            <button className="signin">
-              <div className="flow">
-                <span>Sign in</span>
-              </div>
-              <span>Sign in</span>
-            </button>
-          </Link>
+        <div className="w-btn">
+       <LoginButton />
         </div>
+       <div className="bar">
+        <HiBars3CenterLeft style={{fontSize: "22px"}} onClick={navigate}/>
+       </div>
       </nav>
       <section className="intro" id='home'>
         <div className="contain-all">
-          <div className="intro-text">
+          <div className="intro-text r-flex-column r-center-text">
             <h1>Welcome to Smart<span style={{ color: "var(--primary-color)" }}>Learn</span> Smart-hub for Smart Kids</h1>
-            <div className="intro-text-desc">
+            {/* <div className="intro-text-desc"> */}
               <p>
                 Our mission is bringing quality education and resources to out of school children from low income house-hold
               </p>
+            {/* </div> */}
+            <div className="r-btn">
+            <LoginButton />
             </div>
           </div>
-          <img src={pupil} alt="" />
+          <img src={pupil} alt="" className='r-image-h'/>
         </div>
       </section>
       <section className="categories">
@@ -125,7 +121,7 @@ export default function App() {
           {
             categories.map((each) => {
               return (
-                <div className="each-item ">
+                <div className="each-item r-flex-center-column r-flex-center-row">
                   <div className="ico">
                     <img src={each.logo} alt={each.topic} />
                   </div>
@@ -143,7 +139,7 @@ export default function App() {
         </div>
       </section>
       <section className="third-section" id='about'>
-        <div className="contain-main">
+        <div className="contain-main r-flex-column">
           <div className="third-desc flex flex-center-row flex-column">
             <p>About Us</p>
             <h1>
@@ -161,8 +157,8 @@ export default function App() {
       <section className="fourth-section" id='courses'>
         <h1 id='firstheading'>Trending Courses</h1>
         <p className='fade-text' id='first-p'>Take a look at the trending courses for the week</p>
-        <div className="courses">
-          <div className="course">
+        <div className="courses  ">
+          <div className="course flex flex-column flex-center-column">
             <img src={programming} alt="" />
             <div className="text-p">
               <p className='bold'>Computer programming</p>
@@ -171,7 +167,7 @@ export default function App() {
             <div className="long-line"></div>
             <button>Watch Video</button>
           </div>
-          <div className="course">
+          <div className="course flex flex-column flex-center-column">
             <img src={graph} alt="" />
             <div className="text-p">
               <p className='bold'>Digital Marketing</p>
@@ -180,7 +176,7 @@ export default function App() {
             <div className="long-line"></div>
             <button>Watch Video</button>
           </div>
-          <div className="course">
+          <div className="course flex flex-column flex-center-column">
             <img src={plan} alt="" />
             <div className="text-p">
               <p className='bold'>Data Science</p>
@@ -189,7 +185,7 @@ export default function App() {
             <div className="long-line"></div>
             <button>Watch Video</button>
           </div>
-          <div className="course">
+          <div className="course flex flex-column flex-center-column">
             <img src={study} alt="" />
             <div className="text-p">
               <p className='bold'>SQL for newbies</p>
@@ -206,7 +202,7 @@ export default function App() {
           <h1 className='align-text'>Become an instructor</h1>
           <p className='align-text'>Instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.</p>
           <button>Start Teaching</button>
-          <img src={instructor} alt="ibecome an instructor" />
+          <img src={instructor} alt="become an instructor" />
         </div>
         <div className="instructor">
           <h1>Your teaching & earning steps</h1>
@@ -241,9 +237,9 @@ export default function App() {
               <div className="ratings flex flex-between"><span>4.8</span><span>50 students</span></div>
             </div>
           </div>
-          <div class="center-text"><span className='fade-text'>Thousands of students waiting for an instructor. Start teaching & earning now! </span><a href="#" style={{ color: "var(--primary-color)" }}>Become Instructor</a></div>
-          <div className="trusted-companies">
-            <div className="trusted-companies-desc">
+          <div className="center-text th"><span className='fade-text'>Thousands of students waiting for an instructor. Start teaching & earning now! </span><a href="#" style={{ color: "var(--primary-color)" }}>Become Instructor</a></div>
+          <div className="trusted-companies flex flex-around r-flex-column r-flex-center-column">
+            <div className="trusted-companies-desc r-center-text">
               <h1>50+ trusted companies</h1>
               <p>Here's an overview of the numerous companies that trust us!</p>
             </div>
@@ -261,12 +257,12 @@ export default function App() {
         </div>
       </section>
       <footer id='blog'>
-        <div className="contain-footer-items">
+        <div className="contain-footer-items flex r-flex-column">
           <div className="aim">
             <img src={logo} alt="" width={30} height={20} /><span>SmartLearn</span>
             <p>Build and create dreams with <br />SmartLearn</p>
           </div>
-          <aside>
+          <aside className='flex flex-around flex-center-column'>
             <div className="social">
               <p>Social Media</p>
               <ul>
@@ -302,17 +298,40 @@ export default function App() {
 }
 function Menu(params) {
   return (
-    <ul className='nav-footer'>
-      <li><a href={"#home"}>Home</a>
+    <ul className='nav-footer res-menu r-flex-column'>
+      <li onClick={navigate}><a href={"#home"}>Home</a>
         <div className="line"></div></li>
-      <li><a href={"#about"}>About</a>
+      <li onClick={navigate}><a href={"#about"}>About</a>
         <div className="line"></div></li>
-      <li><a href="#courses">Courses</a>
+      <li onClick={navigate}><a href="#courses">Courses</a>
         <div className="line"></div></li>
-      <li><a href={"#instructor"}>Become An Instructor</a>
+      <li onClick={navigate}><a href={"#instructor"}>Become An Instructor</a>
         <div className="line"></div></li>
-      <li><a href={"#blog"}>Blog</a>
+      <li onClick={navigate}><a href={"#blog"}>Blog</a>
         <div className="line"></div></li>
     </ul>
+  )
+}
+function LoginButton(params) {
+  return(
+    <>
+     <div className="btn">
+          <Link to={"/auth/signup"}>
+            <button className="signup">
+              <div className="flow">
+                <span>Sign up</span>
+              </div>
+              <span>Sign up</span>
+            </button>
+          </Link>
+          <Link to={"/auth/login"}>
+            <button className="signin">
+              <div className="flow">
+                <span>Sign in</span>
+              </div>
+              <span>Sign in</span>
+            </button>
+          </Link>
+        </div></>
   )
 }

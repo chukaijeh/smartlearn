@@ -1,12 +1,10 @@
-.auth-header {
+.auth-header,.landing-header {
   height: 12vh;
   width: 85%;
   margin: auto;
 }
 .landing-header {
-  height: 12vh;
   width: fit-content;
-  margin: auto;
 }
 .auth-header .title {
   margin-top: 25px;
@@ -21,7 +19,7 @@
 }
 .auth-main {
   width: 85%;
-  height: 120vh;
+  height: 140vh;
   margin: auto;
   display: flex;
   margin-bottom: 50px;
@@ -117,10 +115,58 @@ form .line {
   height: 2px;
   background-color: var(--secondary-color);
 }
+form small{
+  color: red;
+}
+form #success{
+  color: rgb(31, 193, 31);
+  font-style: italic;
+  font-weight: 600;
+  font-family: segoe print;
+}
+
 .split {
   display: flex;
   align-items: center;
 }
 .split .center-text {
   padding-inline: 20px;
+}
+.errorMessage{
+  /* position: absolute; */
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 0, 0, 0.372);
+  color: red;
+  margin: auto;
+
+}
+@media (max-width: 800px) {
+  p, input{
+    font-size: 14px;
+  }
+  .auth-header {
+    padding: auto;
+    width: 85%;
+    margin: auto;
+  }
+  .auth-main{
+    width: 100%;
+    margin-bottom: 0;
+    height: fit-content;
+  }
+
+  .contain-text h1,
+.contain-text p {
+  padding: 10px;
+}
+  .auth-main .bg-image, .contain-form{
+    width: 100%;
+  }
+  .bg-image{
+    height: 40%;
+  }
+  .contain-form{
+    height: 60%;
+  }
 }
