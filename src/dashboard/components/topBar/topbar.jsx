@@ -47,7 +47,10 @@ const NavBar = () => {
       <div className="navbar">
         <div className="wrapper">
            <div>
-          
+           <div className="search-container">
+            <i className="search-icon fas fa-search"></i> 
+            <input type="text" className="search-input" placeholder="Search..." />
+          </div>
            </div>
             <div className="navIconbar">
                 <ul className="Iconbar">
@@ -56,10 +59,7 @@ const NavBar = () => {
                     <li className="navName">{user.firstname + ' ' + user.lastname}</li>
                 </ul>
             </div>
-            <div className="search-container">
-            <i className="search-icon fas fa-search"></i> 
-            <input type="text" className="search-input" placeholder="Search..." />
-          </div>
+            
         </div>
       </div>
     );

@@ -138,4 +138,15 @@ li {
         padding-left: 0.5rem;
         
     }
+    @media (max-width: 601px) {
+        .search-container {
+            display: none;
+            /* align-items: center;
+            width: 200px;
+            border: 1px solid #EFEFEF;
+            border-radius: 5px;
+            padding: 5px 10px;
+            background: #FFF; */
+        }
+    }
 }

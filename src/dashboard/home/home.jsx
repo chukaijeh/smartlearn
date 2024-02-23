@@ -108,7 +108,7 @@ export default function Home() {
                                 <p className='small-learning-text'>Introduction to plant biology</p>
                                 <p className=''>Biology</p>
                                 <div className="long-line"></div>
-                                <button className='course-btn'>Watch Video</button>
+                                <Link to="/video?q=tZE_fQFK8EY"><button className='course-btn'>Watch Video</button></Link> 
                             </div>
                         </div>
                         <div className="course-div">
@@ -117,7 +117,7 @@ export default function Home() {
                                 <p className='small-learning-text'>Chemical Pathways</p>
                                 <p className=''>Chemistry</p>
                                 <div className="long-line"></div>
-                                <button className='course-btn'>Watch Video</button>
+                                <Link to="/video?q=bka20Q9TN6M"><button className='course-btn'>Watch Video</button></Link>
                             </div>
                         </div>
                         <div className="course-div">
@@ -126,7 +126,7 @@ export default function Home() {
                                 <p className='small-learning-text'>Introduction to energy</p>
                                 <p className=''>Physics</p>
                                 <div className="long-line"></div>
-                                <button className='course-btn'>Watch Video</button>
+                                <Link to="/video?q=b1t41Q3xRM8"><button className='course-btn'>Watch Video</button></Link>
                             </div>
                         </div>
                         <div className="course-div">
@@ -135,7 +135,7 @@ export default function Home() {
                                 <p className='small-learning-text'>Mathematical Equations</p>
                                 <p className=''>Mathematics</p>
                                 <div className="long-line"></div>
-                                <button className='course-btn'>Watch Video</button>
+                                <Link to="/video?q=JbhBdOfMEPs"><button className='course-btn'>Watch Video</button></Link>
                             </div>
                         </div>
                     </div>

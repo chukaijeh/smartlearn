@@ -17,7 +17,7 @@ export default function DashboardVideo() {
     // const physicsVideo = 'b1t41Q3xRM8'
     // const mathematicsVideo = 'JbhBdOfMEPs'
     return (
-  
+
         <div className="home">
             <SideBar/>
             <div className="homeContainer">
@@ -30,11 +30,11 @@ export default function DashboardVideo() {
                             {videoId && <YouTube videoId={videoId} />}
                        </div>
                     </div>
-                 
+
                 </div>
               </div>
             </div>
         </div>
-        
+
     )
 }
