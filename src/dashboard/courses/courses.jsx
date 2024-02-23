@@ -24,10 +24,11 @@ export default function Courses() {
                     <p id="sorti3">Teacher:</p>
                     </div>
                     <div className="search-content">
-                    <div className="search1">
-                        <i className="search-icon fas fa-search"></i> 
-                        <input type="text" className="search-input1" placeholder="Search in your courses" />
+                    <div>
+                
                     </div>
+
+                    
                     <div className="search2">
                         <i className="search-icon fas fa-search"></i> 
                         <input type="text" className="search-input1" placeholder="Latest" /> 
@@ -118,7 +119,7 @@ export default function Courses() {
                             </div>
 
                             <div className="long-line"></div>
-                            <Link to='/watchcourses'><button id='wad'>Watch Video</button></Link>
+                            {/* <Link to='/watchcourses'><button id='wad'>Watch Video</button></Link> */}
                         </div>
                         </div>
                     </section>

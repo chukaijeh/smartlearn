@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import '../main.css'
 import './home.css'
 import courses from '../../assets/images/home-courses.png'
@@ -12,6 +13,7 @@ import physics from '../../assets/images/home-physics.png'
 import scheduleclass from '../../assets/images/home-schedule-image.png'
 import Modal from "@material-ui/core/Modal";
 import Box from '@mui/material/Box';
+
 
 const style = {
     position: 'absolute',
@@ -169,9 +171,9 @@ export default function Home() {
                                         <p>Select Tutor</p>
                                         <select>
                                             <option value="" disabled selected>Select from the available options</option>
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
+                                            <option value="option1">Dr Khan Bolu</option>
+                                            <option value="option2">Prof Ayedeji</option>
+                                            <option value="option3">Mr Romos</option>
                                         </select>
                                     </div>
                                     <div className="dropdown">
@@ -179,9 +181,9 @@ export default function Home() {
                                         <select>
 
                                             <option value="" disabled selected>Select from the available options</option>
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
+                                            <option value="option1">11am - 1pm</option>
+                                            <option value="option2">5am - 8am</option>
+                                            <option value="option3">As you wish</option>
                                         </select>
                                     </div>
                                     <div className="dropdown">
@@ -189,8 +191,8 @@ export default function Home() {
                                         <select>
 
                                             <option value="" disabled selected>Select from the available options</option>
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
+                                            <option value="option1">11am - 1pm</option>
+                                            <option value="option2">5am - 8am</option>
                                             <option value="option3">Option 3</option>
                                         </select>
                                     </div>

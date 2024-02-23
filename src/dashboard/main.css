@@ -29,3 +29,8 @@
 .page-content{
     margin: 2rem 3rem;
 }
+@media (max-width: 821px) {
+    .page-content{
+        margin: 1rem 1.5rem;
+    }
+}
