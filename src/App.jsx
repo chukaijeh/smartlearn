@@ -33,7 +33,7 @@ import ico9 from './assets/images/music.png';
 import { HiBars3CenterLeft } from "react-icons/hi2";
 
 function navigate(e) {
-  const nav  = document.querySelector(".nav-footer")
+  const nav = document.querySelector(".nav-footer")
   nav.classList.toggle('appear')
 }
 export default function App() {
@@ -93,26 +93,26 @@ export default function App() {
         </header>
         <Menu />
         <div className="w-btn">
-       <LoginButton />
+          <LoginButton />
         </div>
-       <div className="bar">
-        <HiBars3CenterLeft style={{fontSize: "22px"}} onClick={navigate}/>
-       </div>
+        <div className="bar">
+          <HiBars3CenterLeft style={{ fontSize: "22px" }} onClick={navigate} />
+        </div>
       </nav>
       <section className="intro" id='home'>
         <div className="contain-all">
           <div className="intro-text r-flex-column r-center-text">
             <h1>Welcome to Smart<span style={{ color: "var(--primary-color)" }}>Learn</span> Smart-hub for Smart Kids</h1>
             {/* <div className="intro-text-desc"> */}
-              <p>
-                Our mission is bringing quality education and resources to out of school children from low income house-hold
-              </p>
+            <p>
+              Our mission is bringing quality education and resources to out of school children from low income house-hold
+            </p>
             {/* </div> */}
             <div className="r-btn">
-            <LoginButton />
+              <LoginButton />
             </div>
           </div>
-          <img src={pupil} alt="" className='r-image-h'/>
+          <img src={pupil} alt="" className='r-image-h' />
         </div>
       </section>
       <section className="categories">
@@ -288,10 +288,10 @@ export default function App() {
         </div>
       </footer>
       <section className="copyright flex flex-center-column flex-around">
-      <div className="contain-copyright">
+        <div className="contain-copyright">
           © Copyright SmartLearn 2024
-      </div>
-      <Menu />
+        </div>
+        <Menu />
       </section>
     </div>
   )
@@ -313,25 +313,26 @@ function Menu(params) {
   )
 }
 function LoginButton(params) {
-  return(
+  return (
     <>
-     <div className="btn">
-          <Link to={"/auth/signup"}>
-            <button className="signup">
-              <div className="flow">
-                <span>Sign up</span>
-              </div>
+      <div className="btn">
+        <Link to={"/auth/signup"}>
+          <button className="signup">
+            <div className="flow">
               <span>Sign up</span>
-            </button>
-          </Link>
-          <Link to={"/auth/login"}>
-            <button className="signin">
-              <div className="flow">
-                <span>Sign in</span>
-              </div>
+            </div>
+            <span>Sign up</span>
+          </button>
+        </Link>
+        <Link to={"/auth/login"}>
+          <button className="signin">
+            <div className="flow">
               <span>Sign in</span>
-            </button>
-          </Link>
-        </div></>
+            </div>
+            <span>Sign in</span>
+          </button>
+        </Link>
+      </div>
+    </>
   )
 }

@@ -14,26 +14,29 @@ function SignUp() {
   const [emailError, updateEmailError] = useState("")
   const [userAccountSuccessful, updateUserAccountSuccessful] = useState("")
   const [passwordError, updatePasswordError] = useState("")
-async function validate(e) {
-  updateEmailError("")
-  updateFirstNameError("")
-  updateLastNameError("")
-  updatePasswordError("")
-  const inputs = [...e.target];
-  const values = inputs.map((i) => {
-    if (i.className === 'inputfield') {
-      return i.value
-    }
-  })
-  const [firstname, lastname, email, passwd] = [...values]
+  const [isSignUp, updateisSignUp] = useState(false)
+  async function validate(e) {
+    updateEmailError("")
+    updateFirstNameError("")
+    updateLastNameError("")
+    updatePasswordError("")
+    const inputs = [...e.target];
+    const values = inputs.map((i) => {
+      if (i.className === 'inputfield') {
+        return i.value
+      }
+    })
+    const [firstname, lastname, email, passwd] = [...values]
     let condition = true;
     if (!firstname) {
       updateFirstNameError("Firstname cannot be empty")
       condition = false;
+      updateisSignUp(false)
     }
     if (!lastname) {
       updateLastNameError("Lastname cannot be empty")
       condition = false;
+      updateisSignUp(false)
     }
     if (email) {
       console.log("Email validated");
@@ -41,20 +44,23 @@ async function validate(e) {
     else {
       updateEmailError("Email field required")
       condition = false;
+      updateisSignUp(false)
     }
     if (passwd && (passwd.length < 6)) {
       updatePasswordError("Password should have a minimum of 6 characters")
       condition = false;
-    } 
+      updateisSignUp(false)
+    }
     if (!passwd) {
       updatePasswordError("Password field required")
       condition = false;
+      updateisSignUp(false)
     }
-    if (condition){
+    if (condition) {
       let res = await createAccount({ firstname, lastname, email, passwd })
-      console.log(res);
       res.status ? updateUserAccountSuccessful(res.message) : updateEmailError(res.message)
-
+      updateisSignUp(false)
+      !res.status && updateUserAccountSuccessful('')
     }
   }
   return (
@@ -71,6 +77,7 @@ async function validate(e) {
         </div>
         <div className='contain-form main-common'>
           <form onSubmit={function (e) {
+            updateisSignUp(true)
             e.preventDefault()
             validate(e)
           }}>
@@ -84,7 +91,9 @@ async function validate(e) {
             <small>{emailError}</small>
             <input type="password" placeholder='Pas*****' className='inputfield' />
             <small>{passwordError}</small>
-            <input type="submit" id='submit' value={"Sign up"}/>
+            {
+              isSignUp ? <input type="submit" id="submit" value={"authenticating..."} disabled /> : <input type="submit" id="submit" value={"Sign Up"} />
+            }
             <div id="success">{userAccountSuccessful}</div>
             <div className="split">
               <div className="line"></div>
@@ -92,9 +101,9 @@ async function validate(e) {
               <div className="line"></div>
             </div>
             <img src="https://icons8.com/icon/17949/google" alt="" />
-            <GoogleLogin onSuccess={(res)=>{
+            <GoogleLogin onSuccess={(res) => {
               googleSignup(res);
-            }} onError={(resError)=>{
+            }} onError={(resError) => {
               console.log(resError);
             }} className="google"></GoogleLogin>
             <p className='alt-login'>Already have an account ?

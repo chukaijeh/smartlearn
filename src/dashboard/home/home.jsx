@@ -1,4 +1,4 @@
-import React, {useState, useEffect}from 'react'
+import React, { useState, useEffect } from 'react'
 import '../main.css'
 import './home.css'
 import courses from '../../assets/images/home-courses.png'
@@ -24,7 +24,7 @@ const style = {
     boxShadow: 24,
     borderRadius: 8,
     p: 4,
-  };
+};
 
 export default function Home() {
     const [open, setOpen] = React.useState(false)
@@ -42,31 +42,31 @@ export default function Home() {
         const userId = localStorage.getItem('userId');
         console.log(userId)
         const fetchData = async () => {
-          try{
-            const response = await fetch(`https://smart-learn-b3p2.onrender.com/api/users/profile/${userId}`);
-            if(!response.ok) {
-              throw new Error('failed to fetch data')
+            try {
+                const response = await fetch(`https://smart-learn-b3p2.onrender.com/api/users/profile/${userId}`);
+                if (!response.ok) {
+                    throw new Error('failed to fetch data')
+                }
+                const jsonData = await response.json()
+                setData(jsonData);
+                setUser(jsonData.user);
+                console.log(jsonData.user)
+            } catch (error) {
+                setError('error fetching details');
             }
-            const jsonData = await response.json()
-            setData(jsonData);
-            setUser(jsonData.user);
-            console.log(jsonData.user)
-          } catch(error){
-            setError('error fetching details');
-          }
         };
         fetchData();
-      
-        }, [user._id]);
+
+    }, [user._id]);
     // const userDetails = localStorage.getItem(userfirst)
     return (
         <div className="homee">
-              <div className="page-content">
-                 <div className='dasboard-header-div'>
-                   <div><p className='home-dashboard-text'>Dashboard</p></div>
-                   <div><button className='home-button'>Schedule class</button></div>
-                 </div>
-                 <div class="home-dashboard-statistics">
+            <div className="page-content">
+                <div className='dasboard-header-div'>
+                    <div><p className='home-dashboard-text'>Dashboard</p></div>
+                    <div><button className='home-button'>Schedule class</button></div>
+                </div>
+                <div class="home-dashboard-statistics">
                     <div className='analytics-div'>
                         <img src={courses} alt="user" />
                         <div >
@@ -95,49 +95,49 @@ export default function Home() {
                             <p className='analytics-text'>Instructor</p>
                         </div>
                     </div>
-                 </div>
-                 {/* Start Learning */}
-                 <div className='start-learning-div'>
+                </div>
+                {/* Start Learning */}
+                <div className='start-learning-div'>
                     <p className='start-learning-test'>Let’s start learning, {user.firstname}</p>
                     <div className='learning-course-div'>
-                     <div className="course-div">
-                      <img src={biology} alt="" className='home-image'  />
-                      <div className="white-bg">
-                        <p className='small-learning-text'>Introduction to plant biology</p>
-                        <p className=''>Biology</p>
-                        <div className="long-line"></div>
-                        <button className='course-btn'>Watch Video</button>
-                      </div>
-                     </div>
-                     <div className="course-div">
-                      <img src={chemistry} alt="" className='home-image' />
-                      <div className="white-bg">
-                        <p className='small-learning-text'>Chemical Pathways</p>
-                        <p className=''>Chemistry</p>
-                        <div className="long-line"></div>
-                      <button className='course-btn'>Watch Video</button>
-                      </div>
-                     </div>
-                     <div className="course-div">
-                      <img src={physics} alt=""  className='home-image' />
-                      <div className="white-bg">
-                        <p className='small-learning-text'>Introduction to energy</p>
-                        <p className=''>Physics</p>
-                        <div className="long-line"></div>
-                      <button className='course-btn'>Watch Video</button>
-                      </div>
-                     </div>
-                     <div className="course-div">
-                      <img src={mathematics} alt="" className='home-image' />
-                      <div className="white-bg">
-                        <p className='small-learning-text'>Mathematical Equations</p>
-                        <p className=''>Mathematics</p>
-                        <div className="long-line"></div>
-                      <button className='course-btn'>Watch Video</button>
-                      </div>
-                     </div>
-                 </div>
-                 </div>
+                        <div className="course-div">
+                            <img src={biology} alt="" className='home-image' />
+                            <div className="white-bg">
+                                <p className='small-learning-text'>Introduction to plant biology</p>
+                                <p className=''>Biology</p>
+                                <div className="long-line"></div>
+                                <button className='course-btn'>Watch Video</button>
+                            </div>
+                        </div>
+                        <div className="course-div">
+                            <img src={chemistry} alt="" className='home-image' />
+                            <div className="white-bg">
+                                <p className='small-learning-text'>Chemical Pathways</p>
+                                <p className=''>Chemistry</p>
+                                <div className="long-line"></div>
+                                <button className='course-btn'>Watch Video</button>
+                            </div>
+                        </div>
+                        <div className="course-div">
+                            <img src={physics} alt="" className='home-image' />
+                            <div className="white-bg">
+                                <p className='small-learning-text'>Introduction to energy</p>
+                                <p className=''>Physics</p>
+                                <div className="long-line"></div>
+                                <button className='course-btn'>Watch Video</button>
+                            </div>
+                        </div>
+                        <div className="course-div">
+                            <img src={mathematics} alt="" className='home-image' />
+                            <div className="white-bg">
+                                <p className='small-learning-text'>Mathematical Equations</p>
+                                <p className=''>Mathematics</p>
+                                <div className="long-line"></div>
+                                <button className='course-btn'>Watch Video</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {/* Extra Classes */}
                 <div className="home-dashboard-statistics">
                     <div>
@@ -151,58 +151,58 @@ export default function Home() {
                         <img src={scheduleclass} alt="" className='schedule-image' />
                     </div>
                 </div>
-                 {/* Modal */}
-                 <Modal onClose={closeModal} open={open} className='modal'>
-                <>
-                <Box sx={style}>
-                    <div className='modal-div'>
-                        <div>
-                          <p>Schedule extra class</p>
-                            <div>
-                                <div className="dropdown">
-                                    <p>Class name*</p>
-                                    <input type="text" className="" placeholder="E.g Biology" />
+                {/* Modal */}
+                <Modal onClose={closeModal} open={open} className='modal'>
+                    <>
+                        <Box sx={style}>
+                            <div className='modal-div'>
+                                <div>
+                                    <p>Schedule extra class</p>
+                                    <div>
+                                        <div className="dropdown">
+                                            <p>Class name*</p>
+                                            <input type="text" className="" placeholder="E.g Biology" />
+                                        </div>
+                                    </div>
+
+                                    <div className="dropdown">
+                                        <p>Select Tutor</p>
+                                        <select>
+                                            <option value="" disabled selected>Select from the available options</option>
+                                            <option value="option1">Option 1</option>
+                                            <option value="option2">Option 2</option>
+                                            <option value="option3">Option 3</option>
+                                        </select>
+                                    </div>
+                                    <div className="dropdown">
+                                        <p>Select duration</p>
+                                        <select>
+
+                                            <option value="" disabled selected>Select from the available options</option>
+                                            <option value="option1">Option 1</option>
+                                            <option value="option2">Option 2</option>
+                                            <option value="option3">Option 3</option>
+                                        </select>
+                                    </div>
+                                    <div className="dropdown">
+                                        <p>Choose Date and time</p>
+                                        <select>
+
+                                            <option value="" disabled selected>Select from the available options</option>
+                                            <option value="option1">Option 1</option>
+                                            <option value="option2">Option 2</option>
+                                            <option value="option3">Option 3</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <p>Choose from the below option</p>
+                                    </div>
                                 </div>
                             </div>
-                           
-                            <div className="dropdown">
-                                <p>Select Tutor</p>
-                                <select>
-                                    <option value="" disabled selected>Select from the available options</option>
-                                    <option value="option1">Option 1</option>
-                                    <option value="option2">Option 2</option>
-                                    <option value="option3">Option 3</option>
-                                </select>
-                            </div>
-                            <div className="dropdown">
-                            <p>Select duration</p>
-                                <select>
-                                 
-                                    <option value="" disabled selected>Select from the available options</option>
-                                    <option value="option1">Option 1</option>
-                                    <option value="option2">Option 2</option>
-                                    <option value="option3">Option 3</option>
-                                </select>
-                            </div>
-                            <div className="dropdown">
-                            <p>Choose Date and time</p>
-                                <select>
-                                  
-                                    <option value="" disabled selected>Select from the available options</option>
-                                    <option value="option1">Option 1</option>
-                                    <option value="option2">Option 2</option>
-                                    <option value="option3">Option 3</option>
-                                </select>
-                            </div>
-                            <div>
-                                <p>Choose from the below option</p>
-                            </div>
-                        </div>
-                    </div>
-               </Box>
-                </>
-            </Modal>
-              </div>  
+                        </Box>
+                    </>
+                </Modal>
+            </div>
         </div>
     )
 }
