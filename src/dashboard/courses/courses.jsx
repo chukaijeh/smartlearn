@@ -24,10 +24,11 @@ export default function Courses() {
                     <p id="sorti3">Teacher:</p>
                     </div>
                     <div className="search-content">
-                    <div className="search1">
-                        <i className="search-icon fas fa-search"></i> 
-                        <input type="text" className="search-input1" placeholder="Search in your courses" />
+                    <div>
+                
                     </div>
+
+                    
                     <div className="search2">
                         <i className="search-icon fas fa-search"></i> 
                         <input type="text" className="search-input1" placeholder="Latest" /> 
