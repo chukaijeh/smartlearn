@@ -2,37 +2,22 @@ import React, {useState, useEffect} from "react";
 import "./topbar.css";
 // import userImage from '../../../assets/images/user-image.png'
 import notificationBell from '../../../assets/images/notification-bell.png'
-import { GoogleLogin } from "@react-oauth/google";
+import { useParams } from "react-router-dom"; 
 
 const NavBar = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [user, setUser] = useState({});
   const [loading, setloading] = useState(true);
-  const [userId, setUserId] = useState(null); 
+  // const [userId, setUserId] = useState(null); 
+  // const { userId } = useParams();
+
 
   const userImage = user.user_image;
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://smart-learn-b3p2.onrender.com/api/users/profile/65d7375ad5d7c64f7d08527c/');
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
-        const jsonData = await response.json();
-        setUser(jsonData.user);
-        setloading(false);
-      } catch (error) {
-        setError('Error fetching user details');
-        setloading(false);
-      }
-    };
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    if (user._id) {
+    const userId = localStorage.getItem('userId');
+    console.log(userId)
     const fetchData = async () => {
       try{
         const response = await fetch(`https://smart-learn-b3p2.onrender.com/api/users/profile/${userId}`);
@@ -41,7 +26,7 @@ const NavBar = () => {
         }
         const jsonData = await response.json()
         setData(jsonData);
-        setUserId(jsonData.user._id)
+        // setUserId(jsonData.user._id)
         setUser(jsonData.user);
         setloading(false)
         console.log(jsonData.user)
@@ -51,7 +36,7 @@ const NavBar = () => {
       }
     };
     fetchData();
-  }
+  
     }, [user._id]);
 
     if (loading) {
