@@ -77,35 +77,38 @@ li {
     display: flex;
     align-items: center;
 }
+
+
 /* Search */
+
 .search-container {
     display: flex;
     align-items: center;
     width: 365px;
-    border: 1px solid #EFEFEF; 
+    border: 1px solid #EFEFEF;
     border-radius: 5px;
     padding: 5px 10px;
     background: #FFF;
+}
 
-  }
-.search-container::placeholder{
+.search-container::placeholder {
     font-family: Poppins;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
     text-align: left;
+}
 
-    }
-  .search-input {
+.search-input {
     flex: 1;
     border: none;
     outline: none;
     padding: 5px;
     font-size: 16px;
-  }
+}
 
-  .search-icon {
+.search-icon {
     margin-right: 5px;
-    color: #757575; 
-  }
+    color: #757575;
+}
