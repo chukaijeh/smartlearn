@@ -11,6 +11,7 @@ import LiveClass from "./dashboard/liveClass/live-class";
 import Forum from "./dashboard/forum/forum";
 import LearningReport from "./dashboard/learningReport/learning-report";
 import Watchcourses from "./dashboard/courses/Watch Videos/watchcourses";
+import DashboardVideo from "./dashboard/home/Video/video";
 
 const router = createBrowserRouter([{
         path: "/",
@@ -47,6 +48,10 @@ const router = createBrowserRouter([{
     {
         path: "/watchcourses",
         element: < Watchcourses / > ,
+    },
+    {
+        path: "/video",
+        element: < DashboardVideo / > ,
     },
 
 ]);
