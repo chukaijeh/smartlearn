@@ -39,21 +39,26 @@ export default function Home() {
         setOpen(true)
     }
     useEffect(() => {
+        const userId = localStorage.getItem('userId');
+        console.log(userId)
         const fetchData = async () => {
           try{
-            const response = await fetch('https://smart-learn-b3p2.onrender.com/api/users/profile/65d7375ad5d7c64f7d08527c');
+            const response = await fetch(`https://smart-learn-b3p2.onrender.com/api/users/profile/${userId}`);
             if(!response.ok) {
-              throw new Error ('failed to fetch data')
+              throw new Error('failed to fetch data')
             }
-            const jsonData = await response.json();
+            const jsonData = await response.json()
             setData(jsonData);
             setUser(jsonData.user);
+            console.log(jsonData.user)
           } catch(error){
-            setError('error fetching details')
+            setError('error fetching details');
           }
         };
-        fetchData()
-        }, []);
+        fetchData();
+      
+        }, [user._id]);
+    // const userDetails = localStorage.getItem(userfirst)
     return (
         <div className="homee">
               <div className="page-content">
