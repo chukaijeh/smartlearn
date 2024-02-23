@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# SmartLearn
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[smartlearn](./smartlearn.png)
+**SmartLearn** is designed as a
+Learning Management
+System (LMS) to encourage
+and facilitate a simplified
+method of acquiring formal
+education among the less
+privileged children in the
+society, thus eliminating the
+barriers associated with
+finance, distance and
+location which are the
+primary setbacks to
+educational acquisition by
+this class of people.
 
-## Available Scripts
+## Our Objectives
 
-In the project directory, you can run:
+- To transform the educational
+  system for out-of-school (OOS)
+  children in Nigeria by providing
+  digital accessibility and a
+  personalized classroom learning
+  system.
+- To provide foundational
+  learning skills and literacy boost
+  for out-of-school (OOS) children
+  and teenagers in Nigeria.
 
-### `npm start`
+### The Problem
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In June 2022, UNICEF Nigeria revealed that 1 in 3
+children in Nigeria are out of school (OOS)
+making up 15% of the global OOS population
+(UNICEF, 2022).
+This alarming situation has hindered these
+children's academic progress and requires
+urgent intervention to tackle the complex
+challenges
+The identified causes encompass early child
+marriage, affordability, poverty, population
+increase, conflict, economic barriers,
+sociocultural norms, etc.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## To build a Learning
 
-### `npm test`
+Management System
+(LMS) that offers
+accessible, engaging, and
+personalized classroom
+content for children and
+teenagers who are OOS
+in Nigeria.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

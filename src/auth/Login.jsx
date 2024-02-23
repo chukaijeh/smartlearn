@@ -6,12 +6,13 @@ import { loginAuth } from "./services/auth";
 import { useState } from "react";
 import { setItem } from "localforage";
 
- function Login(params) {
+function Login(params) {
     const [errorLogin, setErrorLogin] = useState(false)
+    const [isLogin, setIsLogin] = useState(false)
     return (<div>
         <Link to={"/"}>
             <Header />
-        </Link>        
+        </Link>
 
         <div className="auth-main r-flex r-flex-column">
             <div className='bg-image main-common bg-image-lg'>
@@ -21,37 +22,40 @@ import { setItem } from "localforage";
                 </div>
             </div>
             <div className='contain-form main-common'>
-                <form onSubmit={async function(e){
+                <form onSubmit={async function (e) {
                     e.preventDefault()
+                    setIsLogin(true)
                     setErrorLogin(false)
                     const inputs = [...e.target];
                     const values = inputs.map((i) => {
-                      if (i.className === 'inputfield') {
-                        return i.value
-                      }
+                        if (i.className === 'inputfield') {
+                            return i.value
+                        }
                     })
                     const [email, password] = [...values]
-                    // console.log(email, password);
-                     const res = await loginAuth({email, password})
-                     console.log(res);
-                     if (res && res.status){
+                    const res = await loginAuth({ email, password })
+                    console.log(res);
+                    if (res && res.status) {
                         localStorage.setItem('userId', res['user_id']);
                         console.log("UserIdNew:", res['user_id']);
-                        window.location.href = '/dashboard'; 
-                     }
-                     else{
+                        window.location.href = '/dashboard';
+                    }
+                    else {
                         setErrorLogin(true)
-                     }
+                        setIsLogin(false)
+                    }
                 }}>
                     <h2>Sign in</h2>
                     <p>Enter your email address and password to securely log in to your smartlearn LMS.</p>
-                    <input type="text" placeholder='Name, username or email' className="inputfield"/>
-                    <input type="password" placeholder='pas*****' className="inputfield"/>
-                    <input type="submit" id="submit" value={"Login"} />
+                    <input type="text" placeholder='Name, username or email' className="inputfield" />
+                    <input type="password" placeholder='pas*****' className="inputfield" />
                     {
-                        errorLogin &&  <div className="errorMessage">
-                        Invalid Credentials
-                    </div>
+                        isLogin ? <input type="submit" id="submit" value={"authenticating..."} disabled /> : <input type="submit" id="submit" value={"Login"} />
+                    }
+                    {
+                        errorLogin && <div className="errorMessage">
+                            Invalid Credentials
+                        </div>
                     }
 
                     <input type="checkbox" />
