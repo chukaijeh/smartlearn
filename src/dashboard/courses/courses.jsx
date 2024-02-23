@@ -119,7 +119,7 @@ export default function Courses() {
                             </div>
 
                             <div className="long-line"></div>
-                            <Link to='/watchcourses'><button id='wad'>Watch Video</button></Link>
+                            {/* <Link to='/watchcourses'><button id='wad'>Watch Video</button></Link> */}
                         </div>
                         </div>
                     </section>
