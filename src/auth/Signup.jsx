@@ -89,7 +89,7 @@ function SignUp() {
             <small>{lastNameError}</small>
             <input type="email" placeholder='Email' className='inputfield' />
             <small>{emailError}</small>
-            <input type="password" placeholder='Pas*****' className='inputfield' />
+            <input type="password" placeholder='Password' className='inputfield' />
             <small>{passwordError}</small>
             {
               isSignUp ? <input type="submit" id="submit" value={"authenticating..."} disabled /> : <input type="submit" id="submit" value={"Sign Up"} />

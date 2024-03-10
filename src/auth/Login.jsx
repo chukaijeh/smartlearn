@@ -47,8 +47,8 @@ function Login(params) {
                 }}>
                     <h2>Sign in</h2>
                     <p>Enter your email address and password to securely log in to your smartlearn LMS.</p>
-                    <input type="text" placeholder='Name, username or email' className="inputfield" />
-                    <input type="password" placeholder='pas*****' className="inputfield" />
+                    <input type="text" placeholder='email' className="inputfield" />
+                    <input type="password" placeholder='password' className="inputfield" />
                     {
                         isLogin ? <input type="submit" id="submit" value={"authenticating..."} disabled /> : <input type="submit" id="submit" value={"Login"} />
                     }
