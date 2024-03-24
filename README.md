@@ -1,6 +1,7 @@
-# SmartLearn
+# SmartLearn 
 
-[smartlearn](./smartlearn.png)
+
+[smartlearn](https://smart-learn-snowy.vercel.app)
 **SmartLearn** is designed as a
 Learning Management
 System (LMS) to encourage
