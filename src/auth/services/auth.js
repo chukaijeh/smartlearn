@@ -18,7 +18,7 @@ export async function createAccount({firstname, lastname, email, passwd}){
     return response
 }
 export function googleSignup(cred){
-    const req = fetch("https://www.googleapis.com/oauth2/v1/userinfo", {
+    const req = fetch("https://smart-learn-b3p2.onrender.com/api/auth/google/", {
         headers:{
             Authorization: `Bearer ${cred.credential}`
         }

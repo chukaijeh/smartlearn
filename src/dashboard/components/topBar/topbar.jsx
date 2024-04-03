@@ -13,7 +13,7 @@ const NavBar = () => {
   // const { userId } = useParams();
 
 
-  const userImage = user.user_image;
+  const userImage = user.user_image.url;
 
   useEffect(() => {
     const userId = localStorage.getItem('userId');
